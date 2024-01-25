@@ -145,6 +145,17 @@ ctrl-x
 y
 enter
 echo 192.168.1.1/24 > /etc/net/ifaces/ens256/ipv4address
+```
+Необходимо включить опцию forwarding:  
+```
+nano /etc/net/sysctl.conf
+ctrl-x
+y
+enter
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/c468da7e-93e8-4ab6-8512-bff6152f293e)  
+
+```
 systemctl restart network
 ip -c a
 ```
@@ -177,6 +188,16 @@ ctrl-x
 y
 enter
 echo 	10.0.0.1/26 > /etc/net/ifaces/ens224/ipv4address
+```
+Необходимо включить опцию forwarding:  
+```
+nano /etc/net/sysctl.conf
+ctrl-x
+y
+enter
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/c468da7e-93e8-4ab6-8512-bff6152f293e)  
+```
 systemctl restart network
 ip -c a
 ```
@@ -224,6 +245,16 @@ ctrl-x
 y
 enter
 echo 	10.0.2.1/28 > /etc/net/ifaces/ens34/ipv4address
+```
+Необходимо включить опцию forwarding:  
+```
+nano /etc/net/sysctl.conf
+ctrl-x
+y
+enter
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/c468da7e-93e8-4ab6-8512-bff6152f293e)  
+```
 systemctl restart network
 ip -c a
 ```
