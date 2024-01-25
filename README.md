@@ -1,6 +1,6 @@
 # DEMO2024
 DEMO exam 2024 for dummies  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/23dba506-fe7d-4e66-9592-fad345099039)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/9c79f3aa-70e2-4a41-8577-7d1bf4dfe20f)  
 
 ## [Задание](https://sysahelper.ru/mod/resource/view.php?id=14)  
 ## Описание задания   
@@ -550,3 +550,23 @@ firewall-cmd --reload
 ##скриншот с проверкой подключения  
 
 **8.	Настройте контроль доступа до HQ-SRV по SSH со всех устройств, кроме CLI.**
+
+
+### Модуль 2: Организация сетевого администрирования
+## **Задание модуля 2**
+
+**1. Настройте DNS-сервер на сервере HQ-SRV:**  
+**a. На DNS сервере необходимо настроить 2 зоны**
+
+**Зона hq.work**  
+| Имя | Тип записи | Адрес |
+| :---         |     :---:      |          ---: |
+| hq-r.hq.work   | A, PTR     | IP-адрес    |
+| hq-srv.hq.work   | A, PTR     | IP-адрес    |  
+
+**Зона branch.work**  
+| Имя | Тип записи | Адрес |
+| :---         |     :---:      |          ---: |
+| br-r.branch.work   | A, PTR     | IP-адрес    |
+| br-srv.branch.work   | A, PTR     | IP-адрес    |  
+
