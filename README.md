@@ -428,5 +428,44 @@ systemctl restart network
 | Branch admin     | P@ssw0rd       | BR-SRV BR-R      |
 | Network admin     | P@ssw0rd       | HQ-R BR-R BR-SRV      |
 
+## **CLI**
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/f1abfc96-841c-4bb8-94d3-a6a991b260c0)  
+Пароль: toor
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/7ccf9221-f244-4b1c-b257-884ce25d27dc)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/3b3b13a0-a3b0-4e5d-9104-ec74295a2dc0)
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/7461c42a-578e-4618-9199-e3aed7e9088b)
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/674b3985-06f2-4a96-aff2-f645fcc1ac04)
 
+## **BR-R**
 
+```
+useradd branch-admin -m -c "Branch admin" -U
+passwd branch-admin
+useradd network-admin -m -c "Network admin" -U
+passwd network-admin
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/81e2dde7-a785-4d34-9b66-ddb563b8b4d8)
+
+**BR-SRV**
+```
+useradd branch-admin -m -c "Branch admin" -U
+passwd branch-admin
+useradd network-admin -m -c "Network admin" -U
+passwd network-admin
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/81e2dde7-a785-4d34-9b66-ddb563b8b4d8)
+
+## **HQ-R**
+
+```
+useradd network-admin -m -c "Network admin" -U
+passwd network-admin
+useradd admin -m -c "Admin" -U
+passwd admin
+```
+
+## **HQ-SRV**
+```
+useradd admin -m -c "Admin" -U
+passwd admin
+```
