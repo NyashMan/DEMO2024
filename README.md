@@ -27,7 +27,7 @@ toor
 hostnamectl set-hostname CLI; exec bash
 нажать enter
 ```
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/fb6aaa33-dd89-42fe-bf0e-3485f7eb6dc4)
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/fb6aaa33-dd89-42fe-bf0e-3485f7eb6dc4)  
 
 ### **HQ-R**
 ```
@@ -138,7 +138,7 @@ echo 192.168.0.1/24 > /etc/net/ifaces/ens224/ipv4address
 nano /etc/net/ifaces/ens256/options
 ```
 Файл должен содержать строки, уканазанные ниже: 
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/cf735dff-a882-4adb-bf91-e6fa94bca30c)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/cf735dff-a882-4adb-bf91-e6fa94bca30c)   
 ```
 ctrl-x
 y
@@ -159,7 +159,7 @@ mkdir /etc/net/ifaces/ens224/
 nano /etc/net/ifaces/ens192/options
 ```
 Файл должен содержать строки, уканазанные ниже: 
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/cf735dff-a882-4adb-bf91-e6fa94bca30c)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/cf735dff-a882-4adb-bf91-e6fa94bca30c)    
 ```
 ctrl-x
 y
@@ -217,7 +217,7 @@ echo 	192.168.1.2/24 > /etc/net/ifaces/ens33/ipv4address
 nano /etc/net/ifaces/ens34/options
 ```
 Файл должен содержать строки, уканазанные ниже: 
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/cf735dff-a882-4adb-bf91-e6fa94bca30c) 
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/cf735dff-a882-4adb-bf91-e6fa94bca30c)  
 ```
 ctrl-x
 y
