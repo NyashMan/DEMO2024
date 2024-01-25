@@ -275,3 +275,158 @@ echo 	10.0.2.2/28 > /etc/net/ifaces/ens192/ipv4address
 systemctl restart network
 ip -c a
 ```
+
+**2.	Настройте внутреннюю динамическую маршрутизацию по средствам FRR. Выберите и обоснуйте выбор протокола динамической маршрутизации из расчёта, что в дальнейшем сеть будет масштабироваться.**  
+**Настройка FRR**  
+Для настройки потребуется включённый forwarding, настройка выполнялась ранее.  
+
+Предварительно настроем интерфейс туннеля:
+## **HQ-R**
+```
+mkdir /etc/net/ifaces/tun1
+nano /etc/net/ifaces/tun1/options
+```
+Файл должен содержать строки указанные ниже:  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/70345715-5f78-4ce7-a2ec-d7856df39e48)  
+
+```
+echo 172.16.0.1/24 > /etc/net/ifaces/tun1/ipv4address
+systemctl restart network
+modprobe gre
+```
+## **BR-R**
+```
+mkdir /etc/net/ifaces/tun1
+nano /etc/net/ifaces/tun1/options
+```
+Файл должен содержать строки указанные ниже:  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/6fe1ed3b-207c-44ee-9a53-d8a0478bf9a6)  
+```
+echo 172.16.0.2/24 > /etc/net/ifaces/tun1/ipv4address
+systemctl restart network
+modprobe gre
+```
+Настройку динамическое маршрутизации производим с помощью протокола **OSPF** – потому что…  
+## **HQ-R**
+
+```
+nano /etc/frr/daemons
+меняем строчку
+ospfd=no на строчку
+ospfd=yes
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/3e2c4d58-ea53-44a9-b222-7bf85951b9b4)  
+
+```
+ctrl-x
+y
+systemctl enable --now frr
+vtysh
+conf t
+router ospf
+passive-interface default
+network 10.0.0.0/26 area 0
+network 192.168.0.0/24 area 0
+network 172.16.0.0/24 area 0
+interface tun1
+no ip ospf network broadcast
+no ip ospf passive
+exit
+do write memory
+show ip ospf neighbour
+exit
+```
+В случае возникновения проблем с интерфейсами перезапустите службу frr
+```
+systemctl restart frr
+```
+
+## **BR-R**
+
+```
+nano /etc/frr/daemons
+меняем строчку
+ospfd=no на строчку
+ospfd=yes
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/3e2c4d58-ea53-44a9-b222-7bf85951b9b4)  
+
+```
+ctrl-x
+y
+systemctl enable --now frr
+vtysh
+conf t
+router ospf
+passive-interface default
+network 10.0.2.0./28 area 0
+network 192.168.1.0/24 area 0
+network 172.16.0.0/24 area 0
+exit
+interface tun1
+no ip ospf network broadcast
+no ip ospf passive
+exit
+do write memory
+show ip ospf neighbour
+exit
+```
+В случае возникновения проблем с интерфейсами перезапустите службу frr
+```
+systemctl restart frr
+```
+
+**a.	Составьте топологию сети L3.**
+
+**Схема топологии L3**  
+![Топология сети L3 КП11](https://github.com/NyashMan/DEMO2023/assets/1348639/749e5337-6cfa-4e8f-987c-6af31fae1a42)  
+**P.S.** спасибо sysahelper за рисунок!
+#Дорисовать названия интерфейсов
+
+**3.	Настройте автоматическое распределение IP-адресов на роутере HQ-R.**
+**a.	Учтите, что у сервера должен быть зарезервирован адрес.**
+## **HQ-R**
+```
+nano /etc/sysconfig/dhcpd
+DHCPDARGS=ens224
+ctrl-x
+y
+enter
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/16af1efa-2fb8-44ce-8e23-128430e6d46c)  
+```
+cp /etc/dhcp/dhcpd.conf{.example,}
+nano /etc/dhcp/dhcpd.conf
+```
+После чистки файла, должно получиться следующее содержимое:  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/fbf1fe2d-3e0a-4a59-9560-9e6b401bd3f8)  
+
+Проверяем файл на правильность заполнения. Обратите внимание, что файл заполнен в точности со скриншотом выше. (фигурные скобки в начале и конце секции, знаки ; и тд.)
+```
+dhcpd -t -cf /etc/dhcp/dhcpd.conf
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/0760bb4c-0b85-4ce4-b769-f1bba9d01152)  
+
+```
+systemctl enable --now dhcpd
+systemctl status dhcpd
+journalctl -f -u dhcpd
+```
+## **HQ-SRV**
+```
+systemctl restart network
+```
+После проделанных манирпуляций HQ-SRV должен получить стиатический адрес.
+## скрин с проверкой адреса на HQ-SRV
+
+**4.	Настройте локальные учётные записи на всех устройствах в соответствии с таблицей 2.**  
+**Таблица №2**  
+
+| Логин | Пароль | Примечание |
+| :---         |     :---:      |          ---: |
+| Admin   | P@ssw0rd     | CLI HQ-SRV HQ-R    |
+| Branch admin     | P@ssw0rd       | BR-SRV BR-R      |
+| Network admin     | P@ssw0rd       | HQ-R BR-R BR-SRV      |
+
+
+
