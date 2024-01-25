@@ -444,7 +444,7 @@ passwd branch-admin
 useradd network-admin -m -c "Network admin" -U
 passwd network-admin
 ```
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/81e2dde7-a785-4d34-9b66-ddb563b8b4d8)
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/81e2dde7-a785-4d34-9b66-ddb563b8b4d8)  
 
 **BR-SRV**
 ```
@@ -453,7 +453,7 @@ passwd branch-admin
 useradd network-admin -m -c "Network admin" -U
 passwd network-admin
 ```
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/81e2dde7-a785-4d34-9b66-ddb563b8b4d8)
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/81e2dde7-a785-4d34-9b66-ddb563b8b4d8)  
 
 ## **HQ-R**
 
@@ -463,9 +463,88 @@ passwd network-admin
 useradd admin -m -c "Admin" -U
 passwd admin
 ```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/81e2dde7-a785-4d34-9b66-ddb563b8b4d8)
 
 ## **HQ-SRV**
 ```
 useradd admin -m -c "Admin" -U
 passwd admin
 ```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/81e2dde7-a785-4d34-9b66-ddb563b8b4d8)  
+
+**5.	Измерьте пропускную способность сети между двумя узлами HQ-R-ISP по средствам утилиты iperf 3. Предоставьте описание пропускной способности канала со скриншотами.**
+
+## **HQ-R**
+```
+systemctl enable --now iperf3
+iperf -c 192.168.0.1 -f m
+iperf -c 192.168.0.1 -f m --get-server-output --logfile ~/iperf3_logfile.txt
+```
+
+## **ISP**
+
+```
+systemctl enable --now iperf3
+iperf -s
+```
+
+По результату проверки сделать скриншот.  
+Таким образом, пропускная способность канала между HQ-R -> ISP составляет 4.98 Гбит/с на отправку данных и 4.98 Гбит/с на получение данных. Также за 10 секунд тестирования было передано 5.80 ГБ данных.  
+
+**6.	Составьте backup скрипты для сохранения конфигурации сетевых устройств, а именно HQ-R BR-R. Продемонстрируйте их работу.**  
+
+## **HQ-R**
+
+```
+nano backup-script.sh
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/5cb84998-f6b5-4951-8d2c-095aa8e7e96d)  
+```
+ctrl-x
+y
+enter
+chmod +x backup-script.sh
+./backup-script.sh
+tar -tf /opt/backup/hq-r-06.01.24.tgz | less
+```
+
+## **BR-R**
+
+```
+nano backup-script.sh
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/5cb84998-f6b5-4951-8d2c-095aa8e7e96d)  
+```
+ctrl-x
+y
+enter
+chmod +x backup-script.sh
+./backup-script.sh
+tar -tf /opt/backup/hq-r-06.01.24.tgz | less
+```
+
+**7.	Настройте подключение по SSH для удалённого конфигурирования устройства HQ-SRV по порту 2222. Учтите, что вам необходимо перенаправить трафик на этот порт посредством контролирования трафика.**
+## **HQ-SRV**
+
+```
+nano /etc/openssh/sshd_config
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/d2036a2d-11ac-4eb3-a7ae-17b6633ac0ae)  
+```
+ctrl-x
+y
+enter
+systemctl restart sshd
+```
+## **HQ-R**
+```
+systemctl enable --now firewalld
+firewall-cmd --permanent --zone=public --add-interface=ens192
+firewall-cmd --permanent --zone=trusted --add-interface=ens224
+firewall-cmd --permanent --zone=public --add-forward-port=port=22:proto=tcp:toport=2222:toaddr=10.0.0.2
+firewall-cmd --reload
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/9d635161-5978-4102-9b48-926bc4b070b2)  
+
+Выполняем проверку подключения:  
+##скриншот с проверкой подключения  
