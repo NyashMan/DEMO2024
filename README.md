@@ -568,5 +568,5 @@ firewall-cmd --reload
 | Имя | Тип записи | Адрес |
 | :---         |     :---:      |          ---: |
 | br-r.branch.work   | A, PTR     | IP-адрес    |
-| br-srv.branch.work   | A, PTR     | IP-адрес    |  
+| br-srv.branch.work   | A     | IP-адрес    |  
 
