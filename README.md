@@ -545,7 +545,7 @@ firewall-cmd --permanent --zone=public --add-forward-port=port=22:proto=tcp:topo
 firewall-cmd --reload
 ```
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/9d635161-5978-4102-9b48-926bc4b070b2)  
-
+###скрин заменить!
 Выполняем проверку подключения:  
 ##скриншот с проверкой подключения  
 
