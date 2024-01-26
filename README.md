@@ -333,7 +333,7 @@ no ip ospf network broadcast
 no ip ospf passive
 exit
 do write memory
-show ip ospf neighbour
+show ip ospf neighbor
 exit
 ```
 В случае возникновения проблем с интерфейсами перезапустите службу frr
@@ -359,7 +359,7 @@ vtysh
 conf t
 router ospf
 passive-interface default
-network 10.0.2.0./28 area 0
+network 10.0.2.0/28 area 0
 network 192.168.1.0/24 area 0
 network 172.16.0.0/24 area 0
 exit
@@ -368,7 +368,7 @@ no ip ospf network broadcast
 no ip ospf passive
 exit
 do write memory
-show ip ospf neighbour
+show ip ospf neighbor
 exit
 ```
 В случае возникновения проблем с интерфейсами перезапустите службу frr
