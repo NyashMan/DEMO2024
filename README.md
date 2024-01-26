@@ -165,7 +165,7 @@ enter
 systemctl restart network
 ip -c a
 ```
-#скрин ip -c a
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/dcf5efb1-3d89-47c0-915d-cf09493069af)  
 
 ## **HQ-R**  
 ```
