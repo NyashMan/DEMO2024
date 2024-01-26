@@ -124,7 +124,12 @@ nano /etc/net/ifaces/ens192/options
 ```  
 Файл должен содержать строки, уканазанные ниже:  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/80eaa6c9-695d-4baf-add1-99966066c74c)  
-
+```
+ctrl-x
+y
+enter
+echo 10.0.1.1/24 > /etc/net/ifaces/ens192/ipv4address
+```
 ```
 nano /etc/net/ifaces/ens224/options
 ```
