@@ -110,7 +110,7 @@ echo 10.0.1.2/24 > /etc/net/ifaces/ens192/ipv4address
 systemctl restart network
 ip -c a
 ```
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/38d0f8bf-80c5-4eb1-b354-2a8ffccce54f)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/5e9e976f-6abd-47eb-bc39-622529b4adc4)  
 
 ## **ISP**  
 ```
