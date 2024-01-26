@@ -124,6 +124,7 @@ nano /etc/net/ifaces/ens192/options
 ```  
 Файл должен содержать строки, уканазанные ниже:  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/80eaa6c9-695d-4baf-add1-99966066c74c)  
+
 ```
 nano /etc/net/ifaces/ens224/options
 ```
