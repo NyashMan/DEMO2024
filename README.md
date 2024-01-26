@@ -300,7 +300,8 @@ mkdir /etc/net/ifaces/tun1
 nano /etc/net/ifaces/tun1/options
 ```
 Файл должен содержать строки указанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/6fe1ed3b-207c-44ee-9a53-d8a0478bf9a6)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/51d1ddd5-bbb0-455f-b582-d3ce4cc15350)  
+  
 ```
 echo 172.16.0.2/24 > /etc/net/ifaces/tun1/ipv4address
 systemctl restart network
