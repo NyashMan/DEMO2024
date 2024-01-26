@@ -217,15 +217,18 @@ enter
 nano /etc/net/ifaces/ens192/options
 ```
 Файл должен содержать строки, уканазанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/80eaa6c9-695d-4baf-add1-99966066c74c)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/f5d19530-9805-4d9c-acce-6c417578c2c5)  
+
 ```
 ctrl-x
 y
 enter
-echo 	10.0.0.2/26 > /etc/net/ifaces/ens224/ipv4address
+echo 	10.0.0.2/26 > /etc/net/ifaces/ens192/ipv4address
 systemctl restart network
 ip -c a
 ```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/35198444-295c-4314-b1cd-39814127da2c)
+
 ## **BR-R**  
 ```
 su -
