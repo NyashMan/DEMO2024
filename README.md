@@ -267,6 +267,8 @@ enter
 systemctl restart network
 ip -c a
 ```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/4d63e35b-4cf0-41fa-a647-bf40968b463d)
+
 ## **BR-SRV**  
 ```
 su -
@@ -284,6 +286,7 @@ echo 	10.0.2.2/28 > /etc/net/ifaces/ens192/ipv4address
 systemctl restart network
 ip -c a
 ```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/12b60453-c385-4020-a655-fde5f906b65a)
 
 **2.	Настройте внутреннюю динамическую маршрутизацию по средствам FRR. Выберите и обоснуйте выбор протокола динамической маршрутизации из расчёта, что в дальнейшем сеть будет масштабироваться.**  
 **Настройка FRR**  
@@ -343,6 +346,7 @@ no ip ospf network broadcast
 no ip ospf passive
 exit
 do write memory
+exit
 show ip ospf neighbor
 exit
 ```
@@ -378,6 +382,7 @@ no ip ospf network broadcast
 no ip ospf passive
 exit
 do write memory
+exit
 show ip ospf neighbor
 exit
 ```
