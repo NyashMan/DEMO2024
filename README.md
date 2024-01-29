@@ -492,8 +492,8 @@ passwd admin
 ## **HQ-R**
 ```
 systemctl enable --now iperf3
-iperf -c 192.168.0.1 -f m
-iperf -c 192.168.0.1 -f m --get-server-output --logfile ~/iperf3_logfile.txt
+iperf3 -c 192.168.0.1 -f m
+iperf3 -c 192.168.0.1 -f m --get-server-output --logfile ~/iperf3_logfile.txt
 ```
 
 ## **ISP**
