@@ -414,7 +414,7 @@ cp /etc/dhcp/dhcpd.conf{.example,}
 nano /etc/dhcp/dhcpd.conf
 ```
 После чистки файла, должно получиться следующее содержимое:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/fbf1fe2d-3e0a-4a59-9560-9e6b401bd3f8)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/615154e3-f6b4-4030-93cb-d6087fcf3452)  
 
 Проверяем файл на правильность заполнения. Обратите внимание, что файл заполнен в точности со скриншотом выше. (фигурные скобки в начале и конце секции, знаки ; и тд.)
 ```
