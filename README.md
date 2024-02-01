@@ -300,7 +300,7 @@ mkdir /etc/net/ifaces/tun1
 nano /etc/net/ifaces/tun1/options
 ```
 Файл должен содержать строки указанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a4a05fd2-3b6e-4ef0-adfb-cacb56a918a8)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/6e2359c4-6540-4a1d-816d-88235f7a4e84)  
 
 ```
 echo 172.16.0.1/24 > /etc/net/ifaces/tun1/ipv4address
@@ -313,7 +313,7 @@ mkdir /etc/net/ifaces/tun1
 nano /etc/net/ifaces/tun1/options
 ```
 Файл должен содержать строки указанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a4a05fd2-3b6e-4ef0-adfb-cacb56a918a8)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/41df0352-3464-4324-b636-ab6dc6056658)
 
 ```
 echo 172.16.0.2/24 > /etc/net/ifaces/tun1/ipv4address
