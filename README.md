@@ -397,7 +397,7 @@ systemctl restart frr
 **a.	Составьте топологию сети L3.**
 
 **Схема топологии L3**  
-![Топология сети L3 КП11](https://github.com/NyashMan/DEMO2023/assets/1348639/749e5337-6cfa-4e8f-987c-6af31fae1a42)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/b6fa904c-1517-465b-a04e-c42d16fde450)
 **P.S.** спасибо sysahelper за рисунок!
 #Дорисовать названия интерфейсов
 
