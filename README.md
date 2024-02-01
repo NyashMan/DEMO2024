@@ -99,8 +99,7 @@ enter
 nano /etc/net/ifaces/ens192/options
 ```  
 Файл должен содержать строки, уканазанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/80eaa6c9-695d-4baf-add1-99966066c74c)  
-
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/89ffc2b3-f323-41bf-a21d-2004c9b4ec00)  
 
 ```
 ctrl-x
@@ -110,7 +109,7 @@ echo 10.0.1.2/24 > /etc/net/ifaces/ens192/ipv4address
 systemctl restart network
 ip -c a
 ```
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/5e9e976f-6abd-47eb-bc39-622529b4adc4)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/89ffc2b3-f323-41bf-a21d-2004c9b4ec00)  
 
 ## **ISP**  
 ```
@@ -123,7 +122,8 @@ mkdir /etc/net/ifaces/ens256/
 nano /etc/net/ifaces/ens192/options
 ```  
 Файл должен содержать строки, уканазанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/80eaa6c9-695d-4baf-add1-99966066c74c)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/89ffc2b3-f323-41bf-a21d-2004c9b4ec00)  
+
 ```
 ctrl-x
 y
@@ -134,7 +134,8 @@ echo 10.0.1.1/24 > /etc/net/ifaces/ens192/ipv4address
 nano /etc/net/ifaces/ens224/options
 ```
 Файл должен содержать строки, уканазанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/80eaa6c9-695d-4baf-add1-99966066c74c)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/89ffc2b3-f323-41bf-a21d-2004c9b4ec00)  
+
 ```
 ctrl-x
 y
@@ -145,7 +146,8 @@ echo 192.168.0.1/24 > /etc/net/ifaces/ens224/ipv4address
 nano /etc/net/ifaces/ens256/options
 ```
 Файл должен содержать строки, уканазанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/80eaa6c9-695d-4baf-add1-99966066c74c)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/89ffc2b3-f323-41bf-a21d-2004c9b4ec00)  
+
 ```
 ctrl-x
 y
@@ -177,7 +179,7 @@ mkdir /etc/net/ifaces/ens224/
 nano /etc/net/ifaces/ens192/options
 ```
 Файл должен содержать строки, уканазанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/80eaa6c9-695d-4baf-add1-99966066c74c)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/89ffc2b3-f323-41bf-a21d-2004c9b4ec00)  
 ```
 ctrl-x
 y
@@ -188,7 +190,7 @@ echo 192.168.0.2/24 > /etc/net/ifaces/ens192/ipv4address
 nano /etc/net/ifaces/ens224/options
 ```
 Файл должен содержать строки, уканазанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/80eaa6c9-695d-4baf-add1-99966066c74c)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/89ffc2b3-f323-41bf-a21d-2004c9b4ec00)  
 ```
 ctrl-x
 y
@@ -239,7 +241,7 @@ mkdir /etc/net/ifaces/ens34/
 nano /etc/net/ifaces/ens33/options
 ```
 Файл должен содержать строки, уканазанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/80eaa6c9-695d-4baf-add1-99966066c74c)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/89ffc2b3-f323-41bf-a21d-2004c9b4ec00)  
 ```
 ctrl-x
 y
@@ -248,7 +250,7 @@ echo 	192.168.1.2/24 > /etc/net/ifaces/ens33/ipv4address
 nano /etc/net/ifaces/ens34/options
 ```
 Файл должен содержать строки, уканазанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/80eaa6c9-695d-4baf-add1-99966066c74c)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/89ffc2b3-f323-41bf-a21d-2004c9b4ec00)  
 ```
 ctrl-x
 y
@@ -262,7 +264,7 @@ ctrl-x
 y
 enter
 ```
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/c468da7e-93e8-4ab6-8512-bff6152f293e)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/89ffc2b3-f323-41bf-a21d-2004c9b4ec00)  
 ```
 systemctl restart network
 ip -c a
@@ -277,7 +279,7 @@ enter
 nano /etc/net/ifaces/ens192/options
 ```
 Файл должен содержать строки, уканазанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/80eaa6c9-695d-4baf-add1-99966066c74c)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/89ffc2b3-f323-41bf-a21d-2004c9b4ec00)  
 ```
 ctrl-x
 y
@@ -299,7 +301,7 @@ mkdir /etc/net/ifaces/tun1
 nano /etc/net/ifaces/tun1/options
 ```
 Файл должен содержать строки указанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/70345715-5f78-4ce7-a2ec-d7856df39e48)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/89ffc2b3-f323-41bf-a21d-2004c9b4ec00)  
 
 ```
 echo 172.16.0.1/24 > /etc/net/ifaces/tun1/ipv4address
@@ -312,8 +314,8 @@ mkdir /etc/net/ifaces/tun1
 nano /etc/net/ifaces/tun1/options
 ```
 Файл должен содержать строки указанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/51d1ddd5-bbb0-455f-b582-d3ce4cc15350)  
-  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/89ffc2b3-f323-41bf-a21d-2004c9b4ec00)  
+
 ```
 echo 172.16.0.2/24 > /etc/net/ifaces/tun1/ipv4address
 systemctl restart network
