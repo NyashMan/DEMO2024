@@ -352,8 +352,9 @@ exit
 show ip ospf neighbor
 exit
 ```
-В случае возникновения проблем с интерфейсами перезапустите службу frr
+
 ```
+echo 192.168.1.0/24 via 192.168.0.1 > /etc/net/ifaces/ens192/ipv4route
 systemctl restart frr
 ```
 
@@ -388,8 +389,9 @@ exit
 show ip ospf neighbor
 exit
 ```
-В случае возникновения проблем с интерфейсами перезапустите службу frr
+
 ```
+echo 192.168.0.0/24 via 192.168.1.1 > /etc/net/ifaces/ens33/ipv4route
 systemctl restart frr
 ```
 
