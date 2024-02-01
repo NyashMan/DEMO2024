@@ -264,10 +264,9 @@ ctrl-x
 y
 enter
 ```
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/89ffc2b3-f323-41bf-a21d-2004c9b4ec00)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/c468da7e-93e8-4ab6-8512-bff6152f293e)  
 ```
 systemctl restart network
-ip -c a
 ```
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/4d63e35b-4cf0-41fa-a647-bf40968b463d)
 
