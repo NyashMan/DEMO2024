@@ -111,7 +111,7 @@ echo 10.0.1.2/24 > /etc/net/ifaces/ens192/ipv4address
 systemctl restart network
 ip -c a
 ```
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a4a05fd2-3b6e-4ef0-adfb-cacb56a918a8)  
+Скрин ip -c a на CLI
 
 ## **ISP**  
 ```
