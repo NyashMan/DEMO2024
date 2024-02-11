@@ -4,9 +4,9 @@ DEMO exam 2024 for dummies
  <img src="https://github.com/NyashMan/DEMO2024/assets/1348639/9c79f3aa-70e2-4a41-8577-7d1bf4dfe20f" />
 </p>  
 
-[Образы системы](https://drive.google.com/file/d/19Ox3j-zuUDHDvdscnGtJPKGIzQmyxyoi/view?usp=drive_link)  
-[Задание](https://sysahelper.ru/mod/resource/view.php?id=14)  
-[I'm an inline-style link](https://www.google.com)  
+## [Образы системы](https://drive.google.com/file/d/19Ox3j-zuUDHDvdscnGtJPKGIzQmyxyoi/view?usp=drive_link)  
+## [Задание](https://sysahelper.ru/mod/resource/view.php?id=14)  
+
 ## Описание задания   
 Образец задания для демонстрационного экзамена по комплекту оценочной документации.  
 
