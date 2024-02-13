@@ -17,7 +17,7 @@ DEMO exam 2024 for dummies
 ## **Задание 1 модуля 1** 
 **1.	Выполните базовую настройку всех устройств:**  
 **a.	Присвоить имена в соответствии с топологией:**  
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/9a2a7cbb-7b8f-4a12-9cab-a90b7a0c080b)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/88f09775-e51c-4113-bb6a-1336c200bf7b)  
 
 ### **ISP**
 ```
