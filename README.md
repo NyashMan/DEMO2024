@@ -404,7 +404,7 @@ systemctl restart frr
 **a.	Составьте топологию сети L3.**
 
 **Схема топологии L3**  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a3455853-53f1-4927-ae7c-3eedaf4a6163)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/972cba75-6813-4a1d-a247-344980401182)  
 **P.S.** спасибо sysahelper за рисунок!  
 
 **3.	Настройте автоматическое распределение IP-адресов на роутере HQ-R.**
