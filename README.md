@@ -123,44 +123,13 @@ ip -c a
 su -
 toor
 enter
-mkdir /etc/net/ifaces/ens192/
-mkdir /etc/net/ifaces/ens224/
-mkdir /etc/net/ifaces/ens256/
-nano /etc/net/ifaces/ens192/options
-```  
-Файл должен содержать строки, уканазанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a4a05fd2-3b6e-4ef0-adfb-cacb56a918a8)  
+nmtui
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/6fd69321-b8af-4fac-8af3-ce3d725c3c79)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/2c688d45-2e2e-465b-b248-3bbdd35085b7)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/df296352-40b6-4b49-a803-36918ac6073a)  
+После установки ip-адресов необходимо переподключить интерфейсы.  
 
-```
-ctrl-x
-y
-enter
-echo 10.0.1.1/24 > /etc/net/ifaces/ens192/ipv4address
-```
-```
-nano /etc/net/ifaces/ens224/options
-```
-Файл должен содержать строки, уканазанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a4a05fd2-3b6e-4ef0-adfb-cacb56a918a8)  
-
-```
-ctrl-x
-y
-enter
-echo 192.168.0.1/24 > /etc/net/ifaces/ens224/ipv4address
-```
-```
-nano /etc/net/ifaces/ens256/options
-```
-Файл должен содержать строки, уканазанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a4a05fd2-3b6e-4ef0-adfb-cacb56a918a8)  
-
-```
-ctrl-x
-y
-enter
-echo 192.168.1.1/24 > /etc/net/ifaces/ens256/ipv4address
-```
 Необходимо включить опцию forwarding:  
 ```
 nano /etc/net/sysctl.conf
@@ -174,35 +143,22 @@ enter
 systemctl restart network
 ip -c a
 ```
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/dcf5efb1-3d89-47c0-915d-cf09493069af)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/9c28a552-a15a-4fb8-9b22-339a5cfd0d5d)   
 
 ## **HQ-R**  
 ```
 su -
 toor
 enter
-mkdir /etc/net/ifaces/ens192/
-mkdir /etc/net/ifaces/ens224/
-nano /etc/net/ifaces/ens192/options
+nmtui
 ```
-Файл должен содержать строки, уканазанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a4a05fd2-3b6e-4ef0-adfb-cacb56a918a8)  
-```
-ctrl-x
-y
-enter
-echo 192.168.0.2/24 > /etc/net/ifaces/ens192/ipv4address
-```
-```
-nano /etc/net/ifaces/ens224/options
-```
-Файл должен содержать строки, уканазанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a4a05fd2-3b6e-4ef0-adfb-cacb56a918a8)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/563fb426-a5ae-43ad-895a-83c6cf563845)
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/d6547cfc-0796-45f1-bae9-aacde55d9628)
+
 ```
 ctrl-x
 y
 enter
-echo 	10.0.0.1/26 > /etc/net/ifaces/ens224/ipv4address
 ```
 Необходимо включить опцию forwarding:  
 ```
@@ -219,51 +175,21 @@ ip -c a
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/9df4565f-7e66-46cd-a0f3-a279beac373f)
 
 ## **HQ-SRV**  
-```
-su -
-toor
-enter
-nano /etc/net/ifaces/ens192/options
-```
-Файл должен содержать строки, уканазанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a4a05fd2-3b6e-4ef0-adfb-cacb56a918a8)  
-
-```
-ctrl-x
-y
-enter
-echo 	10.0.0.2/26 > /etc/net/ifaces/ens192/ipv4address
-systemctl restart network
-ip -c a
-```
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/35198444-295c-4314-b1cd-39814127da2c)
+В дальнейшем на HQ-SRV подразумевается получение адреса по DHCP от HQ-R.  
+Удостоверимся, что на интерфейсе установлено получение адресов через DHCP.
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/7d906ddf-918d-4d48-b246-b1d8bfd5803e)  
 
 ## **BR-R**  
 ```
 su -
 toor
 enter
-mkdir /etc/net/ifaces/ens33/
-mkdir /etc/net/ifaces/ens34/
-nano /etc/net/ifaces/ens33/options
+nmtui
 ```
-Файл должен содержать строки, уканазанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a4a05fd2-3b6e-4ef0-adfb-cacb56a918a8)  
-```
-ctrl-x
-y
-enter
-echo 	192.168.1.2/24 > /etc/net/ifaces/ens33/ipv4address
-nano /etc/net/ifaces/ens34/options
-```
-Файл должен содержать строки, уканазанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a4a05fd2-3b6e-4ef0-adfb-cacb56a918a8)  
-```
-ctrl-x
-y
-enter
-echo 	10.0.2.1/28 > /etc/net/ifaces/ens34/ipv4address
-```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/ec24eecb-51fe-464c-a8ff-0445fdabb004)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/13fc4ab3-2428-484a-985d-a267cf38c143)  
+
+
 Необходимо включить опцию forwarding:  
 ```
 nano /etc/net/sysctl.conf
@@ -274,24 +200,14 @@ enter
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/c468da7e-93e8-4ab6-8512-bff6152f293e)  
 ```
 systemctl restart network
+ip -c a
 ```
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/4d63e35b-4cf0-41fa-a647-bf40968b463d)
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/0f3c5a5c-81c4-4372-8c36-74a4ab16e2eb)  
 
 ## **BR-SRV**  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/ed430966-cfd6-418d-beb6-0379cf3519a9)
+
 ```
-su -
-toor
-enter
-nano /etc/net/ifaces/ens192/options
-```
-Файл должен содержать строки, уканазанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a4a05fd2-3b6e-4ef0-adfb-cacb56a918a8)  
-```
-ctrl-x
-y
-enter
-echo 	10.0.2.2/28 > /etc/net/ifaces/ens192/ipv4address
-systemctl restart network
 ip -c a
 ```
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/12b60453-c385-4020-a655-fde5f906b65a)
