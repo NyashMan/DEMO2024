@@ -219,30 +219,18 @@ ip -c a
 Предварительно настроем интерфейс туннеля:
 ## **HQ-R**
 ```
-mkdir /etc/net/ifaces/tun1
-nano /etc/net/ifaces/tun1/options
+nmtui
 ```
-Файл должен содержать строки указанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/6e2359c4-6540-4a1d-816d-88235f7a4e84)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/62a54525-cff5-46fb-9c46-1d4f0f9a1499)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/4df2a006-fa62-4cf3-aa34-2c7685c470a5)  
 
-```
-echo 172.16.0.1/24 > /etc/net/ifaces/tun1/ipv4address
-systemctl restart network
-modprobe gre
-```
 ## **BR-R**
 ```
-mkdir /etc/net/ifaces/tun1
-nano /etc/net/ifaces/tun1/options
+nmtui
 ```
-Файл должен содержать строки указанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/41df0352-3464-4324-b636-ab6dc6056658)
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/62a54525-cff5-46fb-9c46-1d4f0f9a1499)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/914a562f-36cd-4bab-989e-97f2db457044)  
 
-```
-echo 172.16.0.2/24 > /etc/net/ifaces/tun1/ipv4address
-systemctl restart network
-modprobe gre
-```
 Настройку динамическое маршрутизации производим с помощью протокола **OSPF** – потому что…  
 ## **HQ-R**
 
@@ -263,21 +251,25 @@ conf t
 router ospf
 passive-interface default
 network 10.0.0.0/26 area 0
-network 192.168.0.0/24 area 0
 network 172.16.0.0/24 area 0
+exit
 interface tun1
 no ip ospf network broadcast
 no ip ospf passive
 exit
 do write memory
 exit
-show ip ospf neighbor
 exit
 ```
-
+Временно выключаем сервис службы **firewalld**
 ```
-echo 192.168.1.0/24 via 192.168.0.1 > /etc/net/ifaces/ens192/ipv4route
+systemctl astop firewalld.service
+systemctl disable --now firewalld.service
+```
+```
 systemctl restart frr
+vtysh
+show ip ospf neighbour
 ```
 
 ## **BR-R**
@@ -299,7 +291,6 @@ conf t
 router ospf
 passive-interface default
 network 10.0.2.0/28 area 0
-network 192.168.1.0/24 area 0
 network 172.16.0.0/24 area 0
 exit
 interface tun1
@@ -308,12 +299,10 @@ no ip ospf passive
 exit
 do write memory
 exit
-show ip ospf neighbor
 exit
 ```
 
 ```
-echo 192.168.0.0/24 via 192.168.1.1 > /etc/net/ifaces/ens33/ipv4route
 systemctl restart frr
 ```
 
