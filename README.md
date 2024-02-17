@@ -99,24 +99,12 @@ hostnamectl set-hostname BR-SRV; exec bash
 **Назначаем адресацию согласно ранее заполненной таблицы №1**  
 
 ## **CLI**  
-```
-su -
-toor
-enter
-nano /etc/net/ifaces/ens192/options
-```  
-Файл должен содержать строки, уканазанные ниже:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a4a05fd2-3b6e-4ef0-adfb-cacb56a918a8)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/2a47b1bb-fd52-4d8a-9477-d00cc2edecce)  
 
 ```
-ctrl-x
-y
-enter
-echo 10.0.1.2/24 > /etc/net/ifaces/ens192/ipv4address
-systemctl restart network
 ip -c a
 ```
-Скрин ip -c a на CLI
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/c42a6bb6-4742-47fc-8e04-c50d79d34e0b)  
 
 ## **ISP**  
 ```
@@ -299,14 +287,12 @@ no ip ospf passive
 exit
 do write memory
 exit
+show ip router ospf neighbor
 exit
 ```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/c9b9072d-3d7d-4949-8541-cb45601ccb61)
 
-```
-systemctl restart frr
-```
-
-**a.	Составьте топологию сети L3.**
+**a.	Составьте топологию сети L3.**  
 
 **Схема топологии L3**  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/972cba75-6813-4a1d-a247-344980401182)  
@@ -324,28 +310,28 @@ enter
 ```
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/16af1efa-2fb8-44ce-8e23-128430e6d46c)  
 ```
-cp /etc/dhcp/dhcpd.conf{.example,}
 nano /etc/dhcp/dhcpd.conf
 ```
-После чистки файла, должно получиться следующее содержимое:  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/615154e3-f6b4-4030-93cb-d6087fcf3452)  
+заполняем файл:
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/105a539b-7369-47f8-9d85-60958c5916a0)  
 
-Проверяем файл на правильность заполнения. Обратите внимание, что файл заполнен в точности со скриншотом выше. (фигурные скобки в начале и конце секции, знаки ; и тд.)
+Проверяем файл на правильность заполнения. Обратите внимание, что файл заполнен в точности со скриншотом выше. (фигурные скобки в начале и конце секции, знаки **;** и тд.)
 ```
 dhcpd -t -cf /etc/dhcp/dhcpd.conf
 ```
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/0760bb4c-0b85-4ce4-b769-f1bba9d01152)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/77444d5e-534b-42d9-9b55-e976e9ce13ff)   
 
 ```
 systemctl enable --now dhcpd
 systemctl status dhcpd
 journalctl -f -u dhcpd
 ```
+
 ## **HQ-SRV**
 ```
 systemctl restart network
 ```
-После проделанных манирпуляций HQ-SRV должен получить стиатический адрес.
+После проделанных манирпуляций HQ-SRV должен получить статический адрес.
 ## скрин с проверкой адреса на HQ-SRV
 
 **4.	Настройте локальные учётные записи на всех устройствах в соответствии с таблицей 2.**  
