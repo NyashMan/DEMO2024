@@ -251,7 +251,7 @@ exit
 ```
 Временно выключаем сервис службы **firewalld**
 ```
-systemctl astop firewalld.service
+systemctl stop firewalld.service
 systemctl disable --now firewalld.service
 ```
 ```
@@ -285,7 +285,7 @@ no ip ospf passive
 exit
 do write memory
 exit
-show ip ospf neighbor
+show ip ospf neighbour
 exit
 ```
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/c9b9072d-3d7d-4949-8541-cb45601ccb61)
