@@ -424,7 +424,9 @@ iperf -s
 **6.	Составьте backup скрипты для сохранения конфигурации сетевых устройств, а именно HQ-R BR-R. Продемонстрируйте их работу.**  
 
 ## **HQ-R**
-
+Cоздадим дирректорию для сохранения файла:  
+```
+mkdir /opt/backup/
 ```
 nano backup-script.sh
 ```
@@ -432,7 +434,7 @@ nano backup-script.sh
 ```
 ctrl-x
 y
-enter
+жмём enter
 chmod +x backup-script.sh
 ./backup-script.sh
 ```
@@ -450,7 +452,7 @@ nano backup-script.sh
 ```
 ctrl-x
 y
-enter
+жмём enter
 chmod +x backup-script.sh
 ./backup-script.sh
 ```
