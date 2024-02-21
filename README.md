@@ -247,9 +247,16 @@ no ip ospf passive
 exit
 do write memory
 exit
-exit
 ```
-Временно выключаем сервис службы **firewalld**
+Зададим TTL для OSPF  
+```
+nmcli connection edit tun1
+set ip-tunnel.ttl 64
+save
+quit
+```
+
+Временно выключаем сервис службы **firewalld**  
 ```
 systemctl stop firewalld.service
 systemctl disable --now firewalld.service
@@ -285,6 +292,16 @@ no ip ospf passive
 exit
 do write memory
 exit
+```
+Зададим TTL для OSPF  
+```
+nmcli connection edit tun1
+set ip-tunnel.ttl 64
+save
+quit
+```
+Проверим работу OSPF:  
+```
 show ip ospf neighbor
 exit
 ```
