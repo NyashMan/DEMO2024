@@ -403,23 +403,19 @@ passwd admin
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/81e2dde7-a785-4d34-9b66-ddb563b8b4d8)  
 
 **5.	Измерьте пропускную способность сети между двумя узлами HQ-R-ISP по средствам утилиты iperf 3. Предоставьте описание пропускной способности канала со скриншотами.**
-
-## **HQ-R**
-```
-systemctl enable --now iperf3
-iperf3 -c 192.168.0.1 -f m
-iperf3 -c 192.168.0.1 -f m --get-server-output --logfile ~/iperf3_logfile.txt
-```
-
 ## **ISP**
 
 ```
 systemctl enable --now iperf3
-iperf -s
+```
+## **HQ-R**
+```
+systemctl enable --now iperf3
+iperf3 -c 192.168.0.1 -f m --get-server-output
 ```
 
 По результату проверки сделать скриншот.  
-Таким образом, пропускная способность канала между HQ-R -> ISP составляет 4.98 Гбит/с на отправку данных и 4.98 Гбит/с на получение данных. Также за 10 секунд тестирования было передано 5.80 ГБ данных.  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/f972d469-1875-4666-9a10-f5d9ce647f5b)  
 
 **6.	Составьте backup скрипты для сохранения конфигурации сетевых устройств, а именно HQ-R BR-R. Продемонстрируйте их работу.**  
 
