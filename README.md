@@ -310,7 +310,8 @@ exit
 **a.	Составьте топологию сети L3.**  
 
 **Схема топологии L3**  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/972cba75-6813-4a1d-a247-344980401182)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/9ad4ac5a-68a1-4fcd-ad5d-697776518faa)  
+ 
 **P.S.** спасибо sysahelper за рисунок!  
 
 **3.	Настройте автоматическое распределение IP-адресов на роутере HQ-R.**
