@@ -428,6 +428,8 @@ Cоздадим дирректорию для сохранения файла:
 ```
 mkdir /opt/backup/
 ```
+Запишем скрипт:  
+```
 nano backup-script.sh
 ```
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/5cb84998-f6b5-4951-8d2c-095aa8e7e96d)  
@@ -444,7 +446,11 @@ tar -tf /opt/backup/hq-r-06.01.24.tgz | less
 ```
 
 ## **BR-R**
-
+Cоздадим дирректорию для сохранения файла:  
+```
+mkdir /opt/backup/
+```
+Запишем скрипт: 
 ```
 nano backup-script.sh
 ```
