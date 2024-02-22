@@ -479,11 +479,18 @@ systemctl restart sshd
 ```
 ## **HQ-R**
 ```
-systemctl enable --now firewalld
-firewall-cmd --permanent --zone=public --add-interface=ens192
-firewall-cmd --permanent --zone=trusted --add-interface=ens224
-firewall-cmd --permanent --zone=public --add-forward-port=port=22:proto=tcp:toport=2222:toaddr=10.0.0.2
-firewall-cmd --reload
+nft add table inet nat
+
+nft add chain inet nat prerouting '{ type nat hook prerouting priority 0; }'
+
+nft add rule inet nat prerouting ip daddr 192.168.0.2 tcp dport 22 dnat to 10.0.0.2:2222
+
+nft list ruleset | tail -n 7 | tee -a /etc/nftables/nftables.nft
+
+systemctl enable --now nftables
+
+systemctl restart nftables
+
 ```
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/9d635161-5978-4102-9b48-926bc4b070b2)  
 ###скрин заменить!
