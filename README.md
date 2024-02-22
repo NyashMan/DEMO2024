@@ -490,7 +490,7 @@ nft list ruleset
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/4bec0562-f600-4c8f-9a14-c67fa686edc4)  
 
 Выполняем проверку подключения:  
-##скриншот с проверкой подключения  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/d63221e1-a13a-44aa-8add-908d7bcd3f47)  
 
 **8.	Настройте контроль доступа до HQ-SRV по SSH со всех устройств, кроме CLI.**
 
