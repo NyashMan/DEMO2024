@@ -592,6 +592,70 @@ systemctl restart bind
 **c. Все остальные устройства и сервера должны синхронизировать свое время с роутером HQ-R**
 **d. Все устройства и сервера настроены на московский часовой пояс (UTC +3)**
 
+## **HQ-R**  
+Настраиваем сервер времени с параметрами необходимыми в задании:  
+```
+nano /etc/chrony.conf
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/88686ceb-da29-4e4e-83bb-24fcfa1e206b)  
+Перезагружаем машину  
+Проверяем: 
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/b95120d5-61b4-4832-a057-746bba721b01)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/6b268d7e-13c9-42a9-8da4-7c5a06a9f635)  
+Далее производим настройку клиентов (настройка на всех машинах идентична):  
+## **HQ-SRV**  
 
+```
+nano /etc/chrony.conf
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/ee598d6b-181c-430a-b2db-f72025c76c0a)  
+```
+systemctl enable --now chronyd
+```
+Перезагружаем машину  
+Проверяем:  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/1a3b0be2-3919-49ef-8ee7-97cf1987dfaf)  
+
+
+
+## **CLI**  
+```
+nano /etc/chrony.conf
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a56b764a-9ed9-493e-b9af-73bcdb83ae9b)  
+```
+systemctl enable --now chronyd
+```
+Перезагружаем машину  
+
+## **BR-R**  
+# доставить пакет chrony!
+```
+nano /etc/chrony.conf
+```
+# **скрин**
+```
+systemctl enable --now chronyd
+```
+Перезагружаем машину  
+
+## **BR-SRV**  
+# доставить пакет chrony!
+```
+nano /etc/chrony.conf
+```
+# **скрин**
+```
+systemctl enable --now chronyd
+```
+Перезагружаем машину  
+Выполняем проверку:  
+
+## **HQ-R**  
+```
+chronyc clients
+```
+В таблице должны появиться все клиенты, которые синхронизируют время с сервером.  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/214d79a8-9474-42fb-a2d1-7448014f1a24)  
 
 
