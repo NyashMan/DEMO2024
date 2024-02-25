@@ -541,3 +541,57 @@ nft list ruleset
 | br-r.branch.work   | A, PTR     | IP-адрес    |
 | br-srv.branch.work   | A     | IP-адрес    |  
 
+## **HQ-SRV**  
+
+```
+nano /etc/bind/options.conf
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/d903e095-bbe6-4050-b473-a475d2fd5d46)  
+
+```
+systemctl enable --now bind
+echo name_servers=127.0.0.1 >> /etc/resolvconf.conf
+nano /etc/bind/local.conf
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/754ad3e6-64da-4fa4-ad12-22e05b21a960)  
+```
+cp /etc/bind/zone/{localdomain,hq.db}
+cp /etc/bind/zone/{localdomain,branch.db}
+cp /etc/bind/zone/{127.in-addr.arpa,0.db}
+cp /etc/bind/zone/{127.in-addr.arpa,2.db}
+chown root:named /etc/bind/zone/{hq,branch,0,2}.db
+nano /etc/bind/zone/hq.db
+```
+Обратите внимание на синтаксис. Проверьте точки в конце наименований зон!
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/e81f251c-9987-4d8d-ad47-e4ae50d99e1d)  
+```
+nano /etc/bind/zone/branch.db
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/b2740789-a372-40f4-8558-b12afeb85d78)  
+```
+nano /etc/bind/zone/0.db
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/b4239e96-7018-4286-8861-ea53aa074e85)  
+```
+/etc/bind/zone/2.db
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/44051f89-75a5-44ac-a5b5-d83d9c4f8afa)  
+```
+systemctl restart bind
+```
+Выполняем проверку:  
+
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/030310e9-e147-4465-8266-f16a628c6152)  
+
+Если настройка была выполнена верно, то вы увидети прямые и обратные зоны DNS.  
+
+**2. Настройте синхронизацию времени между сетевыми устройствами по протоколу NTP**
+
+**a. В качестве сервера должен выступать роутер HQ-R со стратумом 5**
+**b. Используйте Loopback интерфейс на HQ-R, как источник сервера времени**
+**c. Все остальные устройства и сервера должны синхронизировать свое время с роутером HQ-R**
+**d. Все устройства и сервера настроены на московский часовой пояс (UTC +3)**
+
+
+
+
