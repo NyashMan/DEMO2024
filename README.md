@@ -694,7 +694,7 @@ acc
 reboot
 ```
 Авторизируемся под учётной записью administrator  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a486a543-ae64-4c3d-86b7-af40d0e0ec38)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/8dd05567-f23c-479f-83b3-2a763d4b3e0c)  
 Пароль: P@ssw0rd   
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/0da696e1-bfd2-4014-966e-9b7df6eaa484)  
 
