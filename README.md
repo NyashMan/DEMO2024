@@ -814,17 +814,17 @@ echo 10.0.0.2 mediawiki.demo.first mediawiki >> /etc/hosts
 Проверяем доступность:  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/d821eac7-f394-4702-816d-2917aacefa61)  
 Производим настройку:  
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/749aef74-1a57-4375-b952-5a1bb192e30d)  
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/81b8eddd-9db3-4ff7-bb5b-cd9e55f58514)  
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/139a07b9-83f0-4549-9f28-3ffe4315f99e)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/21e1e0e5-4c3f-4976-a586-47f4d7c9fe08)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/5bc4f9bc-1bf0-4b87-98f5-0144c5d8993d)   
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/7a56c424-d208-4b8e-a08f-9eed876f0b5f)  
 Пароль от БД: DEP@ssw0rd  
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/706c8f94-cedd-449d-ae31-19b4b0882bf2)  
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/f48f4192-6665-466a-8259-2e419594ad4a)  
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/ff57a0ca-90ac-4adc-bd5c-35104b7afb14)  
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/062f36ed-1f88-481d-a43e-0103e3f6aa0d)  
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/74f9b2ad-ea47-470f-8d59-306b2b823947)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a2d00579-a8f3-4bdf-aa26-7a32fe21900c)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/7cd2e4c7-e435-4c51-abe8-97519f8f9bd9)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/2b5c2ed9-9fc0-4df4-9233-8514deecf98e)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/34986562-91b2-4b6f-8baa-2ae82f69981f)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/fb8bf074-00f5-4cf0-817c-ca4a2c7fa344)    
 После настройки, необходимо скачать файл LocalLocalSettings.php  
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/7ee3cb0b-13de-480a-8915-63bc8d19f30b)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/6c6fb61f-8684-4279-bc39-768e0e06676d)  
 Переместите скачанный файл в директорию, в которой находится файл wiki.yml  
 ```
 su -
