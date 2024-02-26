@@ -622,7 +622,8 @@ systemctl enable --now chronyd
 ```
 nano /etc/chrony.conf
 ```
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a56b764a-9ed9-493e-b9af-73bcdb83ae9b)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/dc931139-5cbf-4bf8-92d1-c6e23f4e2156)  
+
 ```
 systemctl enable --now chronyd
 ```
