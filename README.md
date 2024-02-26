@@ -551,7 +551,6 @@ nano /etc/bind/options.conf
 
 ```
 systemctl enable --now bind
-echo name_servers=127.0.0.1 >> /etc/resolvconf.conf
 nano /etc/bind/local.conf
 ```
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/754ad3e6-64da-4fa4-ad12-22e05b21a960)  
