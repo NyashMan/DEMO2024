@@ -599,7 +599,7 @@ nano /etc/chrony.conf
 ```
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/88686ceb-da29-4e4e-83bb-24fcfa1e206b)  
 Перезагружаем машину  
-Проверяем: 
+Проверяем:  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/b95120d5-61b4-4832-a057-746bba721b01)  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/6b268d7e-13c9-42a9-8da4-7c5a06a9f635)  
 Далее производим настройку клиентов (настройка на всех машинах идентична):  
