@@ -745,6 +745,10 @@ admc
 Создаём группы для только что созданных пользователей:  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/49402392-a1ff-4428-a264-497e0e8cdc2f)  
 
+
+
+
+
 **4. Реализуйте файловый SMB или NFS (выбор обоснуйте) сервер на базе сервера HQ-SRV.**  
 
 **a. Должны быть опубликованы общие папки по названиям:**  
@@ -758,7 +762,6 @@ admc
 **a. На главной странице должен отражаться номер места**
 **b. Используйте базу данных mySQL**
 **c. Создайте пользователей в соответствии с таблицей**
-
 
 
 
@@ -820,5 +823,22 @@ echo 10.0.0.2 mediawiki.demo.first mediawiki >> /etc/hosts
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/ff57a0ca-90ac-4adc-bd5c-35104b7afb14)  
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/062f36ed-1f88-481d-a43e-0103e3f6aa0d)  
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/74f9b2ad-ea47-470f-8d59-306b2b823947)
-
+После настройки, необходимо скачать файл LocalLocalSettings.php  
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/7ee3cb0b-13de-480a-8915-63bc8d19f30b)  
+Переместите скачанный файл в директорию, в которой находится файл wiki.yml  
+```
+su -
+cp путь до файла LocalLocalSettings.php ~/
+nano ~/wiki.yml
+```
+```
+docker-compose -f wiki.yml stop
+docker-compose -f wiki.yml up -d
+```
+Проверяем доступ к http://mediawiki.demo.first:8080:
+## **CLI**
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/1ee2b717-a8db-480a-bbd5-19861bc35efc)  
+вход осуществляем из под пользователя **wiki** с паролем **DEP@ssw0rd** :
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/b1a99892-5e4d-4ab0-95b2-cf80523b5850)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/5db17453-6a94-4244-8a4d-b29e3dcfe2f7)  
 
