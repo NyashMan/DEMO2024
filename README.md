@@ -813,7 +813,8 @@ echo 10.0.0.2 mediawiki.demo.first mediawiki >> /etc/hosts
 ```
 Проверяем доступность:  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/d821eac7-f394-4702-816d-2917aacefa61)  
-Производим настройку:  
+Производим настройку: 
+## **HQ-SRV**
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/21e1e0e5-4c3f-4976-a586-47f4d7c9fe08)  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/5bc4f9bc-1bf0-4b87-98f5-0144c5d8993d)   
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/7a56c424-d208-4b8e-a08f-9eed876f0b5f)  
