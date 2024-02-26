@@ -658,4 +658,97 @@ chronyc clients
 В таблице должны появиться все клиенты, которые синхронизируют время с сервером.  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/214d79a8-9474-42fb-a2d1-7448014f1a24)  
 
+**3. Настройте сервер домена выбор, его типа обоснуйте, на базе HQ-SRV через web интерфейс, выбор технологий обоснуйте**  
+**a. Введите машины BR-SRV и CLI в данный домен**  
+**b. Организуйте отслеживание подключения к домену**  
+
+## **ISP**
+Произведём настройку маршрута для CLI
+```
+ip route add default via 192.168.0.2
+```
+## **HQ-SRV**
+Произведём временное отключение интерфейсов
+```
+nmtui
+```
+# скрин выключения интерфейсов docker
+
+# настройка домен-контроллера
+
+Вводим машины в домен:  
+## **CLI**
+Указываем DNS сервер домена  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/5a770be8-4b58-4a5e-9a0b-f0c2c5065ed2)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/cf042173-7b61-45f4-805a-41748b9bbc6e)  
+Отключаем и включаем сетевое соединение  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/221af92f-31cf-4443-90dd-31e48613a900)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a1ddcd99-449f-4ee3-9fb1-a14dba15cd0a)  
+```
+acc
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/defc901c-27ac-418e-9198-6af22620939e)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/5d753e57-d2ab-433b-8f22-a48df6d62449)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/759f6dee-63c7-4a0e-819b-f297e51349f4)  
+```
+reboot
+```
+Авторизируемся под учётной записью administrator  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a486a543-ae64-4c3d-86b7-af40d0e0ec38)  
+Пароль: P@ssw0rd   
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/0da696e1-bfd2-4014-966e-9b7df6eaa484)  
+
+## **BR-SRV**
+Указываем DNS сервер домена  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/5a770be8-4b58-4a5e-9a0b-f0c2c5065ed2)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/d46862d7-3ce5-4ee2-9753-7221822ae075)  
+Отключаем и включаем сетевое соединение  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/221af92f-31cf-4443-90dd-31e48613a900)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a1ddcd99-449f-4ee3-9fb1-a14dba15cd0a)  
+```
+acc
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/defc901c-27ac-418e-9198-6af22620939e)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/f1a96ed4-f52e-46e7-b3ff-6952c6093d62)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/7f034e5c-9c52-4db9-ae51-dabd30f9a366)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/1d146328-0b59-49f3-a952-c5d88ccaea95)  
+
+```
+reboot
+```
+Авторизируемся под учётной записью administrator  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a486a543-ae64-4c3d-86b7-af40d0e0ec38)  
+Пароль: P@ssw0rd  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/44323daf-1640-4067-9b9c-8226aa18f666)  
+
+
+## **CLI**
+Необходимо зайти обратно под пользователем user
+```
+kinit administrator
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/bfffad87-29d0-4a4c-b8ae-2c938764e237)  
+## установить пакет admc
+```
+admc
+```
+Необходимо создать доменных пользователей из таблицы (они не конфликтуют с теми, что были созданы ранее), они необходимы для настройки доступа к сетевым хранилищам.  
+
+| Логин | Пароль | 
+| :---         |     ---:      | 
+| Admin   | P@ssw0rd     | 
+| Branch admin     | P@ssw0rd       | 
+| Network admin     | P@ssw0rd       | 
+
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/fad947e9-f101-454b-91f4-c9411b220172)  
+Создаём группы для только что созданных пользователей:  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/49402392-a1ff-4428-a264-497e0e8cdc2f)  
+
+**4. Реализуйте файловый SMB или NFS (выбор обоснуйте) сервер на базе сервера HQ-SRV.**  
+
+**a. Должны быть опубликованы общие папки по названиям:**  
+**i. Branch_Files - только для пользователя Branch admin;**  
+**ii. Network - только для пользователя Network admin;**  
+**iii. Admin_Files - только для пользователя Admin;**  
+**b. Каждая папка должна монтироваться на всех серверах в папку /mnt/ (например, /mnt/All_files) автоматически при входе доменного пользователя в систему и отключаться при его выходе из сессии. Монтироваться должны только доступные пользователю каталоги**  
 
