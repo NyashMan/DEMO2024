@@ -822,7 +822,7 @@ echo 10.0.0.2 mediawiki.demo.first mediawiki >> /etc/hosts
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/f48f4192-6665-466a-8259-2e419594ad4a)  
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/ff57a0ca-90ac-4adc-bd5c-35104b7afb14)  
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/062f36ed-1f88-481d-a43e-0103e3f6aa0d)  
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/74f9b2ad-ea47-470f-8d59-306b2b823947)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/74f9b2ad-ea47-470f-8d59-306b2b823947)  
 После настройки, необходимо скачать файл LocalLocalSettings.php  
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/7ee3cb0b-13de-480a-8915-63bc8d19f30b)  
 Переместите скачанный файл в директорию, в которой находится файл wiki.yml  
