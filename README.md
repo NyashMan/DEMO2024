@@ -1,4 +1,4 @@
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a518aa38-8c45-40b9-ba75-fc1cb86f066c)# DEMO2024
+# DEMO2024
 DEMO exam 2024 for dummies  
 <p align="center">
  <img src="https://github.com/NyashMan/DEMO2024/assets/1348639/b2fcce28-cdb6-4c8d-b011-b0ea196ec384" />
