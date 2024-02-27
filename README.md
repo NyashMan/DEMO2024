@@ -998,3 +998,29 @@ logger -p 'error' 'Test'
 Проверяем его:  
 ## **BR-SRV**  
 
+
+**9. Настройте программный RAID 5 из дисков по 1 Гб, которые подключены к машине BR-SRV. **
+
+## **BR-SRV**
+
+```
+lsblk
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/2e20c3f2-2ece-4229-832e-a288622b8ede)  
+
+```
+mdadm --create /dev/md0 --level=5 --raid-devices=3 /dev/sdb /dev/sdc /dev/sdd
+watch cat /proc/mdstat
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/777719db-054f-4c0d-b444-94fc894ae1cc)  
+
+```
+mkfs.ext4 /dev/md0
+mkdir /mnt/raid5
+mount /dev/md0 /mnt/raid5
+nano /etc/fstab
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/c4fcf214-b4ef-467f-8523-808804b407d1)  
+
+
+
