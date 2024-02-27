@@ -1,4 +1,4 @@
-# DEMO2024
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a518aa38-8c45-40b9-ba75-fc1cb86f066c)# DEMO2024
 DEMO exam 2024 for dummies  
 <p align="center">
  <img src="https://github.com/NyashMan/DEMO2024/assets/1348639/b2fcce28-cdb6-4c8d-b011-b0ea196ec384" />
@@ -669,11 +669,51 @@ chronyc clients
 ip route add default via 192.168.0.2
 ```
 ## **HQ-SRV**
-Произведём временное отключение интерфейсов
+Произведём временное отключение интерфейсов. Обязательно перед началом настройки samba! 
 ```
 nmtui
 ```
-# скрин выключения интерфейсов docker
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/bd3570e1-b9be-4a5f-bf5a-887cf27100cd)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/e807a623-e6be-4573-92b8-ca5a8227a0c2)  
+
+```
+nano /etc/bind/options.conf
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/52f85f0f-c239-430c-89ae-db65267e00b5)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/fe226eca-2c18-4af4-8547-a4ea54a27b5c)  
+```
+systemctl stop bind
+nano /etc/sysconfig/network
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/d18b6f9c-ab19-4f81-b4ea-91b161f99be8)  
+```
+hostnamectl set-hostname hq-srv.demo.first;exec bash
+domainname demo.first
+rm -f /etc/samba/smb.conf
+rm -rf /var/lib/samba
+rm -rf /var/cache/samba
+mkdir -p /var/lib/samba/sysvol
+samba-tool domain provision
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/eeb41185-579d-410f-9755-be4f2b6f7970)  
+
+```
+systemctl enable --now samba
+systemctl enable --now bind
+cp /var/lib/samba/private/krb5.conf /etc/krb5.conf
+samba-tool domain info 127.0.0.1
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/3d30b5b2-144b-4347-828a-86ffdcb56759)  
+```
+host -t SRV _kerberos._udp.demo.first.
+host -t SRV _ldap._tcp.demo.first.
+host -t A hq-srv.demo.first
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a5ac8e81-d2c5-4bc8-aa99-ee6613652bf5)  
+```
+kinit administrator@DEMO.FIRST
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/ab190c07-ce7f-4ed8-80c7-7fe7cc69955c)  
 
 # настройка домен-контроллера
 
