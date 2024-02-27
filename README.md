@@ -962,7 +962,7 @@ docker-compose -f wiki.yml up -d
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/b1a99892-5e4d-4ab0-95b2-cf80523b5850)  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/5db17453-6a94-4244-8a4d-b29e3dcfe2f7)  
 
-### Under Construction
+# **Under Construction**
 _______________________________________________________________________________________________________________________
 ### Модуль 3: Эксплуатация объектов сетевой инфраструктуры
 ## **Задание модуля 3:**
