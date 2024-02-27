@@ -1,8 +1,9 @@
 # DEMO2024
 DEMO exam 2024 for dummies  
 <p align="center">
- <img src="https://github.com/NyashMan/DEMO2024/assets/1348639/b2fcce28-cdb6-4c8d-b011-b0ea196ec384" />
+ <img src="https://github.com/NyashMan/DEMO2024/assets/1348639/f1c404ad-a564-4ea7-b407-34dc01c9c626" />
 </p>  
+
 
 ## [Снимки ОС](https://drive.google.com/file/d/19Ox3j-zuUDHDvdscnGtJPKGIzQmyxyoi/view?usp=drive_link)  
 Для удобства список LAN Segmet, который необходимо создать при развёртывании образов в VMWare WorkStation. 
