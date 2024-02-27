@@ -801,9 +801,19 @@ admc
 **b. Используйте базу данных mySQL**  
 **c. Создайте пользователей в соответствии с таблицей**  
 
-
-
-
+| Пользователь | Группа | 
+| :---         |     ---:      | 
+| Admin   | Admin     | 
+| Manager1     | Manager       | 
+| Manager2     | Manager       | 
+| Manager3     | Manager       |
+| User1     | WS       |
+| User2     | WS       |
+| User3     | WS       |
+| User4     | WS       |
+| User5     | TEAM       |
+| User6     | TEAM       |
+| User7     | TEAM       |  
 
 
 **6. Запустите сервис MediaWiki используя docker на сервере HQ-SRV.**  
