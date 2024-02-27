@@ -678,7 +678,6 @@ nmtui
 ```
 control bind-chroot disabled
 grep -q 'bind-dns' /etc/bind/named.conf || echo 'include "/var/lib/samba/bind-dns/named.conf";' >> /etc/bind/named.conf
-```
 nano /etc/bind/options.conf
 ```
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/52f85f0f-c239-430c-89ae-db65267e00b5)  
