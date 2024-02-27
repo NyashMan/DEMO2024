@@ -1038,8 +1038,33 @@ nano /etc/openssh/sshd_config
 **h. Установите авторизацию по сертификату выданным HQ-SRV**   
 ## расписать пункт
 
+6. Настройте виртуальный принтер с помощью CUPS для возможности печати документов из Linux-системы на сервере BR-SRV.
+Предположим, что печать должна осуществляться с устройства **CLI**
+## **BR-SRV**
 
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/2e5308fe-e651-4ff1-a6bb-15bbea4cbc33)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/c4100fc6-0fad-45e4-8a63-72bbe4272163)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/540dce0c-8826-4085-8584-bcc181d5793e)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/095fa6bb-2e41-4c8d-bccc-92c110bcf0e8)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/13de7d6d-efdc-41ec-8ba8-fb14ee7f15d0)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/40c189bb-7d65-4d63-8058-e815604dbbd7)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/71e2ca26-5441-425d-8172-f7997eac6e0c)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/8741d74e-07c5-4342-b570-ef671f3c1fb7)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/4352d232-3669-4eea-b23f-dfbb623cf050)  
 
+## **CLI**
+Добавляем принтер:  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/b439af24-a068-4dc8-a4af-184e13cf51ce)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/e6ddb986-f59a-4e65-8668-c4252f0c0604)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/9c9dd491-a171-46d3-9098-68cd43e356e7)  
+После поиска появится окно аутентификации, игнорируем его.
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/40274e25-60c1-4dc4-a084-bedc97d1e8de)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/cb9e9e41-98d4-4f1f-9a67-7fe77e1eba62)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/7c530dac-46c4-4d4a-a286-79ca943cfed5)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/45f7d6a2-9cd6-4728-9587-4af2af385b0f)  
+
+Проверяем результат:  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/58b11fc3-e81a-4fff-982e-1fc83ab1697f)  
 
 
 **9. Настройте программный RAID 5 из дисков по 1 Гб, которые подключены к машине BR-SRV.**
