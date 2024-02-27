@@ -1039,10 +1039,10 @@ nano /etc/openssh/sshd_config
 **h. Установите авторизацию по сертификату выданным HQ-SRV**   
 ## расписать пункт
 
-6. Настройте виртуальный принтер с помощью CUPS для возможности печати документов из Linux-системы на сервере BR-SRV.
+6. Настройте виртуальный принтер с помощью **CUPS** для возможности печати документов из Linux-системы на сервере BR-SRV.
 Предположим, что печать должна осуществляться с устройства **CLI**
 ## **BR-SRV**
-
+Открываем в браузере **http://localhost:631/admin** :
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/2e5308fe-e651-4ff1-a6bb-15bbea4cbc33)  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/c4100fc6-0fad-45e4-8a63-72bbe4272163)  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/540dce0c-8826-4085-8584-bcc181d5793e)  
