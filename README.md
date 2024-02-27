@@ -815,6 +815,76 @@ admc
 | User6     | TEAM       |
 | User7     | TEAM       |  
 
+## **BR-SRV**
+```
+systemctl enable --now httpd2.service
+```
+Проверяем доступность развёрнутого портала по адресу http://moodle.loclhost/install.php
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/98c858ee-21ba-44de-a1b5-773dd51c381f)  
+
+Настроим доступ по имени на клиенте:
+## **CLI**
+```
+echo 10.0.2.2 moodle.demo.first moodle >> /etc/hosts
+```
+Проверяем:  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/3c386270-ec05-4569-a9cb-75420348db7d)  
+
+Производим установку: 
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/10c8e350-c9d1-44ce-a067-417a83da062d)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/d7a7dd69-934c-4c61-90b6-6c9433b97063)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/ed9fa557-ca17-4d5e-b7a1-ba6abe03d3f6)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a9059078-920d-4d5d-a864-191e71407b6a)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/435487cc-f7bc-4e75-af86-363bce94c161)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a5c0ad7c-7087-4f26-8076-626266f4f341)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a4291eac-c41a-4086-bbb0-ba2ee3e2e64d)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/3517aa0a-b74b-4ae4-8497-e4059bd207da)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/6cf17575-c680-48e0-9efa-9c63712e504e)  
+Создаём группы для пользователей заданных в таблице:  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/9cb5e81a-05e1-4df6-9872-64411c725070)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/be52d171-3065-4542-8995-c67299184cc1)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/e1149176-aa8d-4bdb-bc02-1ff0f4014722)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/92c2fc9e-ceb3-4b9e-ad5f-b703e29089b0)  
+По аналогии создаём оставшиеся группы  
+Проверяем:  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/7180999f-9d31-4987-9a45-fed431832c57)  
+Создаём пользователей:  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/66529690-2e64-4a03-ae3a-2c69f4d1eff4)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/006d7ef5-6d7b-4f11-823e-c243d5531ce3)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/237d3f1b-7e20-4c45-98a4-d6ad84ab5dbd)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/1194c06c-d138-4496-8ab1-7c98b9dc230d)  
+По аналогии создаём оставшихся пользователей  
+Проверяем:  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/abc9045b-d7af-4648-8bf0-36330bdda176)  
+Добавляем пользователей в соответствующие группы:  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/2061b9cd-8403-4334-b7f1-42eaa98f4861)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a24eadca-7270-44cd-87f9-5a49d7ad72e8)  
+По аналогии добавляем оставшихся пользователей в группы  
+Проверяем:  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/00b648c5-7d9f-46eb-ba90-8d31299f13fc)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 **6. Запустите сервис MediaWiki используя docker на сервере HQ-SRV.**  
 
