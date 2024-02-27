@@ -1022,7 +1022,7 @@ nano /etc/openssh/banner
 nano /etc/openssh/sshd_config
 ```
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/7f8f99e3-dcd7-460a-b097-c11f55461a66)  
-**b. Установите запрет на доступ root;**
+**b. Установите запрет на доступ root;**  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/bfafff53-62de-42a6-bd0f-61d6fc431ec1)  
 **c. Отключите аутентификацию по паролю;**  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/884b7397-0c7b-40ff-800c-14ab8bfd77b7)  
