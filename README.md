@@ -962,3 +962,37 @@ docker-compose -f wiki.yml up -d
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/b1a99892-5e4d-4ab0-95b2-cf80523b5850)  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/5db17453-6a94-4244-8a4d-b29e3dcfe2f7)  
 
+### Модуль 3: Эксплуатация объектов сетевой инфраструктуры
+## **Задание модуля 3:**
+
+**1. Реализуйте мониторинг по средствам rsyslog на всех Linux хостах.**
+**a. Составьте отчёт о том, как работает мониторинг**
+
+## **BR-SRV**
+
+```
+/etc/rsyslog.d/00_common.conf
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/285ecb22-fee3-4187-b892-9f0ee7805f29)  
+```
+systemctl enable --now rsyslog
+```
+## **BR-R**
+
+```
+echo "*.* @@10.0.2.2:514" > /etc/rsyslog.d/all_log.conf
+systemctl enable --now rsyslog
+```
+Проверим работоспособность:  
+## **BR-SRV**  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/3003d608-6538-4fce-8405-7edb6da15505)
+
+Отправляем тестовый лог:  
+
+## **BR-R**
+```
+logger -p 'error' 'Test'
+```
+Проверяем его:  
+## **BR-SRV**  
+
