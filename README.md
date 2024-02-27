@@ -1022,5 +1022,8 @@ nano /etc/fstab
 ```
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/c4fcf214-b4ef-467f-8523-808804b407d1)  
 
+Проверяем работоспособность:  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/7875afe5-027e-46ca-aaa4-85ed688f0528)  
+
 
 
