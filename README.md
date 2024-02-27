@@ -1030,7 +1030,7 @@ nano /etc/openssh/sshd_config
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/fa433de7-989c-4276-a5ef-bb9d70c0bb9b)  
 **e. Ограничьте ввод попыток до 4;**  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/9a941af5-e7c0-498f-ab40-b9dd304b6c0b)  
-**f. Отключите пустые пароли;** 
+**f. Отключите пустые пароли;**  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/80a71064-3e7f-4b9b-a006-596d4d931449)  
 **g. Установите предел времени аутентификации до 5 минут;**  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a0ec9ef0-8481-4602-b8ac-217e315c3b9a)  
