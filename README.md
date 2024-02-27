@@ -715,8 +715,6 @@ kinit administrator@DEMO.FIRST
 ```
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/ab190c07-ce7f-4ed8-80c7-7fe7cc69955c)  
 
-# настройка домен-контроллера
-
 Вводим машины в домен:  
 ## **CLI**
 Указываем DNS сервер домена  
