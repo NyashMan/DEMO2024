@@ -1064,6 +1064,7 @@ nano /etc/openssh/sshd_config
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/45f7d6a2-9cd6-4728-9587-4af2af385b0f)  
 
 Проверяем результат:  
+## **BR-SRV**
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/58b11fc3-e81a-4fff-982e-1fc83ab1697f)  
 
 
