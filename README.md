@@ -308,6 +308,7 @@ show ip ospf neighbor
 exit
 ```
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/c9b9072d-3d7d-4949-8541-cb45601ccb61)
+P.S. в случае, если OSPF не заработал, можно перезапустить машины **ISP** **BR-R** **HQ-R**  
 
 **a.	Составьте топологию сети L3.**  
 
