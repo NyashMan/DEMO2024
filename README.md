@@ -499,6 +499,7 @@ nft list ruleset
 ## **HQ-SRV**
 
 ```
+systemctl enable --now nftables.service
 nft add rule inet filter input ip saddr 10.0.1.2 tcp dport 2222 counter drop
 ```
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/6eeaf5e0-22d3-4342-89ec-ec5fd4a7fcbd)  
