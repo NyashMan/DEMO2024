@@ -821,7 +821,7 @@ admc
 ```
 systemctl enable --now httpd2.service
 ```
-Проверяем доступность развёрнутого портала по адресу http://moodle.loclhost/install.php
+Проверяем доступность развёрнутого портала по адресу http://moodle.localhost/install.php
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/98c858ee-21ba-44de-a1b5-773dd51c381f)  
 
 Настроим доступ по имени на клиенте:
