@@ -302,6 +302,14 @@ set ip-tunnel.ttl 64
 save
 quit
 ```
+Временно выключаем сервис службы **firewalld**  
+```
+systemctl stop firewalld.service
+systemctl disable --now firewalld.service
+```
+```
+systemctl restart frr
+```
 Проверим работу OSPF:  
 ```
 show ip ospf neighbor
