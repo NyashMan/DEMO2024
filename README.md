@@ -642,22 +642,20 @@ systemctl enable --now chronyd
 Перезагружаем машину  
 
 ## **BR-R**  
-# доставить пакет chrony!
 ```
 nano /etc/chrony.conf
 ```
-# **скрин**
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/35d731d2-8976-40ed-8bf3-a25d64a8653b)  
 ```
 systemctl enable --now chronyd
 ```
 Перезагружаем машину  
 
 ## **BR-SRV**  
-# доставить пакет chrony!
 ```
 nano /etc/chrony.conf
 ```
-# **скрин**
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/99f15f8d-1abc-4a33-a2a5-dbad3b99c266)
 ```
 systemctl enable --now chronyd
 ```
@@ -669,7 +667,8 @@ systemctl enable --now chronyd
 chronyc clients
 ```
 В таблице должны появиться все клиенты, которые синхронизируют время с сервером.  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/214d79a8-9474-42fb-a2d1-7448014f1a24)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/cc364a0a-2ed1-44c9-b917-57f5e6fa53f6)  
+
 
 **3. Настройте сервер домена выбор, его типа обоснуйте, на базе HQ-SRV через web интерфейс, выбор технологий обоснуйте**  
 **a. Введите машины BR-SRV и CLI в данный домен**  
