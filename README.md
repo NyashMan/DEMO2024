@@ -708,7 +708,7 @@ rm -rf /var/cache/samba
 mkdir -p /var/lib/samba/sysvol
 samba-tool domain provision
 ```
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/eeb41185-579d-410f-9755-be4f2b6f7970)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/6a877b28-1400-48f4-9f80-9af0be13ee88)  
 
 ```
 systemctl enable --now samba
