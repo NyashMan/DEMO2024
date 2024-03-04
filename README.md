@@ -780,7 +780,6 @@ reboot
 kinit administrator
 ```
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/bfffad87-29d0-4a4c-b8ae-2c938764e237)  
-## установить пакет admc
 ```
 admc
 ```
@@ -796,10 +795,6 @@ admc
 Создаём группы для только что созданных пользователей:  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/49402392-a1ff-4428-a264-497e0e8cdc2f)  
 
-
-
-
-
 **4. Реализуйте файловый SMB или NFS (выбор обоснуйте) сервер на базе сервера HQ-SRV.**  
 
 **a. Должны быть опубликованы общие папки по названиям:**  
@@ -807,6 +802,23 @@ admc
 **ii. Network - только для пользователя Network admin;**  
 **iii. Admin_Files - только для пользователя Admin;**  
 **b. Каждая папка должна монтироваться на всех серверах в папку /mnt/ (например, /mnt/All_files) автоматически при входе доменного пользователя в систему и отключаться при его выходе из сессии. Монтироваться должны только доступные пользователю каталоги**  
+
+## **HQ-SRV**
+```
+mkdir /opt/{branch,network,admin}
+chmod 777 /opt/{branch,network,admin}
+nano /etc/samba/smb.conf
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/5131cfca-8376-479f-8195-7c9bafad0ac2)  
+```
+systemctl restart samba
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/f163a907-7f63-4bd5-937c-b34c860ad594)  
+```
+nano /etc/security/pam_mount.conf.xml
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/eebb7cd4-c869-4d23-acd0-528654b8ac7b)
+**P.S. напишите один раздел, затем скопируйте его 2 раза, поменяв uid и path **  
 
 **5. Сконфигурируйте веб-сервер LMS Apache на сервере BR-SRV:**  
 
