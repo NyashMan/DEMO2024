@@ -587,7 +587,7 @@ nano /etc/bind/zone/0.db
 ```
 nano /etc/bind/zone/2.db
 ```
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/513af82f-67ee-47a4-89de-e06ec1c8cd4f)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/548cd06f-0a16-4aaa-802a-2cd70c2c9f9d)  
 ```
 systemctl restart bind
 ```
