@@ -813,12 +813,24 @@ nano /etc/samba/smb.conf
 ```
 systemctl restart samba
 ```
+## **BR-SRV**
+```
+nano /etc/pam.d/system-auth
+```
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/f163a907-7f63-4bd5-937c-b34c860ad594)  
 ```
 nano /etc/security/pam_mount.conf.xml
 ```
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/eebb7cd4-c869-4d23-acd0-528654b8ac7b)
-**P.S. напишите один раздел, затем скопируйте его 2 раза, поменяв uid и path **  
+**P.S. напишите один раздел, затем скопируйте его 2 раза, поменяв uid и path**  
+
+**Проверяем**
+Заходим из под пользователя Admin:  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/0f0573e2-0031-48f4-8768-d69c1a158962)  
+Заходим из под пользователя Branch admin:  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/61e2576e-31f1-4484-8d30-f5a7e7a9740c)  
+Заходим из под пользователя Network admin:  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/28b3c8c2-c35f-43a5-9ad6-203d77ba6c2a)  
 
 **5. Сконфигурируйте веб-сервер LMS Apache на сервере BR-SRV:**  
 
