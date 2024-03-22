@@ -853,7 +853,13 @@ nano /etc/security/pam_mount.conf.xml
 | User7     | TEAM       |  
 
 ## **BR-SRV**
+
+
 ```
+mariadb
+CREATE DATABASE moodle;
+CREATE USER 'moodle'@’localhost’ IDENTIFIED BY 'moodle';
+GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,CREATE TEMPORARY TABLES,DROP,INDEX,ALTER ON moodle.* TO 'moodle'@’localhost’;
 systemctl enable --now httpd2.service
 ```
 Проверяем доступность развёрнутого портала по адресу http://moodle.localhost/install.php
@@ -868,6 +874,7 @@ echo 10.0.2.2 moodle.demo.first moodle >> /etc/hosts
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/3c386270-ec05-4569-a9cb-75420348db7d)  
 
 Производим установку: 
+**Выбирайте англ. язык!** 
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/10c8e350-c9d1-44ce-a067-417a83da062d)  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/d7a7dd69-934c-4c61-90b6-6c9433b97063)  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/ed9fa557-ca17-4d5e-b7a1-ba6abe03d3f6)  
