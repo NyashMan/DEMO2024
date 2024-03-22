@@ -987,7 +987,7 @@ echo 10.0.0.2 mediawiki.demo.first mediawiki >> /etc/hosts
 Пароль от БД: DEP@ssw0rd  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a2d00579-a8f3-4bdf-aa26-7a32fe21900c)  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/7cd2e4c7-e435-4c51-abe8-97519f8f9bd9)  
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/2b5c2ed9-9fc0-4df4-9233-8514deecf98e)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/d8b291f4-d493-485c-bfc7-a836250ae2d8)   
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/34986562-91b2-4b6f-8baa-2ae82f69981f)  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/fb8bf074-00f5-4cf0-817c-ca4a2c7fa344)    
 После настройки, необходимо скачать файл LocalLocalSettings.php  
@@ -995,10 +995,15 @@ echo 10.0.0.2 mediawiki.demo.first mediawiki >> /etc/hosts
 Переместите скачанный файл в директорию, в которой находится файл wiki.yml  
 ```
 su -
-cp путь до файла LocalLocalSettings.php ~/
+toor
+cp /home/user/Загрузки/LocalSettings.php ./
 nano ~/wiki.yml
 ```
+Проверяем, что данная стока не закоментирована (Отсутствует #)
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/384057a1-0fcf-407c-a12b-a031d6b2150d)  
 ```
+ctrl-x
+y
 docker-compose -f wiki.yml stop
 docker-compose -f wiki.yml up -d
 ```
