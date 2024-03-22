@@ -860,6 +860,10 @@ mariadb
 CREATE DATABASE moodle;
 CREATE USER 'moodle'@’localhost’ IDENTIFIED BY 'moodle';
 GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,CREATE TEMPORARY TABLES,DROP,INDEX,ALTER ON moodle.* TO 'moodle'@’localhost’;
+nano /var/www/html/moodle/config.php
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/7a56b8d6-6d4c-48b7-95b3-46305949f272)  
+```
 systemctl enable --now httpd2.service
 ```
 Проверяем доступность развёрнутого портала по адресу http://moodle.localhost/install.php
