@@ -809,7 +809,7 @@ mkdir /opt/{branch,network,admin}
 chmod 777 /opt/{branch,network,admin}
 nano /etc/samba/smb.conf
 ```
-![image](https://github.com/NyashMan/DEMO2024/assets/1348639/5131cfca-8376-479f-8195-7c9bafad0ac2)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/1e08ba6e-6325-4646-b942-a651c2b025a4)  
 ```
 systemctl restart samba
 ```
@@ -1174,7 +1174,7 @@ cp /home/user/Загрузки/zabbix.conf.php /var/www/webapps/zabbix/ui/conf/
 | :---         |     ---:      | 
 | AdminMonitoring   | P@ssw0rd!     |  
 
-После авторизации в панели администрирования - содадим пользователя:
+После авторизации в панели администрирования - создадим пользователя:
 ## **CLI**
 
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/6b51d7c8-c45d-464c-986f-8b26a2c4547b)  
