@@ -1100,7 +1100,35 @@ nano /etc/openssh/sshd_config
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/58b11fc3-e81a-4fff-982e-1fc83ab1697f)  
 
 
-**9. Настройте программный RAID 5 из дисков по 1 Гб, которые подключены к машине BR-SRV.**
+7. Между офисами HQ и BRANCH установите защищенный туннель, позволяющий осуществлять связь между
+регионами с применением внутренних адресов.
+
+## **HQ-R**
+
+```
+nano /etc/strongswan/ipsec.conf
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a54fce7e-53d3-480c-9be3-e1e8f199d8b0)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/65563fc5-13b8-4c36-a392-db77c19ec9fe)  
+```
+systemctl enable --now ipsec.service
+```
+## **HQ-R**
+```
+nano /etc/strongswan/ipsec.conf
+```
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/124af0e2-aaac-41da-a80b-387da03724bf)  
+![image](https://github.com/NyashMan/DEMO2024/assets/1348639/971cd09f-9ccd-4245-92de-9f7ce9521615)  
+
+```
+systemctl enable --now ipsec.service
+```
+
+```
+ipsec status
+```
+
+9. Настройте программный RAID 5 из дисков по 1 Гб, которые подключены к машине BR-SRV.
 
 ## **BR-SRV**
 
