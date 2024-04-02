@@ -1113,7 +1113,7 @@ nano /etc/strongswan/ipsec.conf
 ```
 systemctl enable --now ipsec.service
 ```
-## **HQ-R**
+## **BR-R**
 ```
 nano /etc/strongswan/ipsec.conf
 ```
