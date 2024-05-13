@@ -119,6 +119,11 @@ nmtui
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/df296352-40b6-4b49-a803-36918ac6073a)  
 После установки ip-адресов необходимо переподключить интерфейсы.  
 
+Произведём настройку маршрута для CLI
+```
+ip route add default via 192.168.0.2
+```
+
 Необходимо включить опцию forwarding:  
 ```
 nano /etc/net/sysctl.conf
@@ -337,9 +342,10 @@ enter
 ```
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/16af1efa-2fb8-44ce-8e23-128430e6d46c)  
 ```
+cp /etc/dhcp/dhcpd.conf{.example,}
 nano /etc/dhcp/dhcpd.conf
 ```
-заполняем файл:  
+поправляем файл:  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/9263f9b8-4ac5-41e5-aa44-4d93285e774e)  
 
 
